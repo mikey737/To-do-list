@@ -25,16 +25,8 @@
         tasks[index].done = !tasks[index].done;
         render();
     }
-    const render = () => {
-        let htmlString = "";
-        for (const task of tasks) {
-            htmlString += `
-                <li class="list__item${task.done ? " list__item--done" : ""}"><button class=js-taskDone>Zrobione?</button>
-                ${task.content}<button class="js-remove">Usuń</button>
-                </li>
-        `;
-        }
-        document.querySelector(".js-taskList").innerHTML = htmlString;
+
+    const addEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove")
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
@@ -48,6 +40,19 @@
             toggleDone(index);
         });
     });
+    }
+
+    const render = () => {
+        let htmlString = "";
+        for (const task of tasks) {
+            htmlString += `
+                <li class="list__item${task.done ? " list__item--done" : ""}"><button class=js-taskDone>Zrobione?</button>
+                ${task.content}<button class="js-remove">Usuń</button>
+                </li>
+        `;
+        }
+        document.querySelector(".js-taskList").innerHTML = htmlString;
+        addEvents() 
 }
     const onFormSubmit = ((event) => {
         event.preventDefault();
