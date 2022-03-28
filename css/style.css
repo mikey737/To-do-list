@@ -8,3 +8,7 @@ html{
 .list__item--done{
     text-decoration: line-through;
 }
+.body{
+    background-color: #eee;
+    margin:auto;
+}

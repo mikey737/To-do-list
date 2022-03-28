@@ -1,0 +1,14 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.flex__item{
+padding-left: 20px;
+background-color: white;
+margin: 2px;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+}
