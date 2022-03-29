@@ -35,5 +35,5 @@ background-color: crimson;
 .list__button--remove:active{
 background-color: rgb(211, 0, 0);
 }
-.list__item--done{
+.list__text--done{
     text-decoration: line-through;}
