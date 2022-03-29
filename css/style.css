@@ -5,10 +5,10 @@ html{
 *, ::after ::before{
     box-sizing: inherit;
 }
-.list__item--done{
-    text-decoration: line-through;
-}
+
 .body{
     background-color: #eee;
     margin:auto;
+    font-family: 'Montserrat', sans-serif;
+    word-break: break-word;
 }

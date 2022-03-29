@@ -1,11 +1,7 @@
 .form {
-    display: flex;
-}
-
-@media (max-width: 767px) {
-    .form {
-        flex-wrap: wrap;
-    }
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
 }
 
 .form__input {
@@ -19,8 +15,8 @@
     padding: 10px;
     color: white;
     background-color: teal;
-    max-width: 150px;
     align-self: center;
+    margin-right: 10px;
 }
 
 .form__button:hover {
@@ -29,4 +25,12 @@
 
 .form__button:active {
     background-color: rgb(1, 95, 95);
+}
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: auto;
+    }
+    .form__button{
+        width:100%;
+    }
 }
